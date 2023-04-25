@@ -1,0 +1,27 @@
+@use "../utils/_main" as utils
+
+.header
+    margin-top: 7rem
+
+    &__title
+        padding-bottom: 2.5rem
+        @extend %title-1
+        text-align: center
+
+    &__explains
+        text-align: center
+        @extend %text-1
+
+    &__play-button
+        margin-top: 2.5rem
+        margin-bottom: 5rem
+        padding: 0.5rem
+        @extend %text-1
+        height: 2.5rem
+        font-size: 1rem
+        font-weight: 700
+        border-radius: 0.5rem
+        border: none
+        cursor: pointer
+        background: utils.$grey
+        color: utils.$light-purple

@@ -1,0 +1,44 @@
+@use "../utils/_main" as utils
+
+.score
+    margin-top: 1rem
+
+    &__title
+        @extend %title-1
+        +utils.responsive("phone")
+            margin-bottom: 1.5rem
+
+    &__values
+        flex-direction: column
+        margin-top: 0.5rem
+        +utils.responsive("phone")
+            flex-direction: row
+            margin-top: 0rem
+
+    &__player
+        +utils.responsive("phone")
+            margin-right: 2rem
+
+        &--title
+            margin-bottom: 0.5rem
+            @extend %text-1
+            +utils.responsive("phone")
+                margin-bottom: 2.5rem
+
+        &--value
+            text-align: center
+            @extend %text-1
+
+    &__computer
+        +utils.responsive("phone")
+            margin-left: 2rem
+
+        &--title
+            margin-bottom: 0.5rem
+            @extend %text-1
+            +utils.responsive("phone")
+                margin-bottom: 2.5rem
+
+        &--value
+            text-align: center
+            @extend %text-1

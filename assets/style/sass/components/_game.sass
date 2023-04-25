@@ -1,0 +1,86 @@
+@use "../utils/_main" as utils
+
+.header-game
+    margin-top: 1rem
+
+.game
+    margin-top: 4rem
+    flex-direction: column
+    +utils.responsive("tablet")
+        flex-direction: row
+
+    &__player
+        +utils.responsive("tablet")
+            padding-right: 5rem
+
+    &__player-title
+        padding-bottom: 2.5rem
+        @extend %title-2
+        text-align: center
+
+    &__player-choices
+        flex-direction: column
+        +utils.responsive("phone")
+            flex-direction: row
+
+        &--stone
+            width: 4.4rem
+            padding: 0.3rem
+            &:hover
+                box-shadow: 5px 5px 60px 2px rgba(0,0,0,0.75)
+                cursor: pointer
+
+        &--paper
+            width: 5rem
+            padding: 0.3rem
+            &:hover
+                box-shadow: 5px 5px 60px 2px rgba(0,0,0,0.75)
+                cursor: pointer
+
+        &--scissors
+            width: 5rem
+            padding: 0.3rem
+            &:hover
+                box-shadow: 5px 5px 60px 2px rgba(0,0,0,0.75)
+                cursor: pointer
+
+    &__computer
+        margin-top: 4rem
+        +utils.responsive("tablet")
+            padding-left: 5rem
+            margin-top: 0
+
+    &__computer-title
+        padding-bottom: 2.5rem
+        text-align: center
+
+    &__computer-choices
+        flex-direction: column
+        +utils.responsive("phone")
+            flex-direction: row
+
+        &--stone
+            width: 4.4rem
+            padding: 0.3rem
+
+        &--paper
+            width: 5rem
+            padding: 0.3rem
+
+        &--scissors
+            width: 5rem
+            padding: 0.3rem
+
+    &__button
+        margin-top: 6rem
+        margin-bottom: 2.5rem
+        padding: 0.5rem
+        @extend %text-1
+        height: 2.5rem
+        font-size: 1rem
+        font-weight: 700
+        border-radius: 0.5rem
+        border: none
+        cursor: pointer
+        background: utils.$grey
+        color: utils.$light-purple
